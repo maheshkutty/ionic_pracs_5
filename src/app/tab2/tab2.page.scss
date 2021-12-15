@@ -1,0 +1,33 @@
+.imgStyle {
+  height: 300px;
+  width: 100%;
+}
+
+/* DOES NOT WORK - not specific enough */
+.modal-wrapper {
+  background: yellow;
+}
+
+/* Works - pass "my-custom-class" in cssClass to increase specificity */
+.my-custom-class {
+  background: yellow;
+  --height: 100px;
+}
+
+h3{
+    color: #fa0;
+    font-weight: bold;
+}
+
+
+.qstyle{
+    font-size: 20px;
+    margin: 5px;
+    color: #00a39b;
+    font-weight: bold;
+}
+
+ion-radio{
+    --color:#00a39b;
+    --color-checked:#00a39b;
+}

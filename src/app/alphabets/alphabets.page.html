@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onClick()">
+        <ion-back-button></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Alphabets</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment
+    [(ngModel)]="type"
+    (ionChange)="segmentChanged($event)"
+    color="danger"
+  >
+    <ion-segment-button value="Watch">
+      <ion-label>Watch</ion-label>
+      <ion-icon name="tv-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="Pronouce">
+      <ion-icon name="megaphone-outline"></ion-icon>
+      <ion-label>Pronouce</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="type">
+    <div *ngSwitchCase="'Pronouce'">
+      <h1 class="mainText">Lets Speak &#128512;</h1>
+      <ion-slides scrollbar="false" #Slides>
+        <ion-slide *ngFor="let item of data">
+          <div>
+            <img [src]="item.src" alt="item.text" class="imgStyle" />
+            <ion-icon
+              name="megaphone-outline"
+              class="iconStyle"
+              (click)="speakText(item.text)"
+              slot="end"
+            ></ion-icon>
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <div style="position: absolute;top: 50%;left: 5px;font-size: 40px;z-index: 2;" (click)="this.Slides.slidePrev()">
+        <ion-icon name="chevron-back-sharp" style="color: #d1d1d1;"></ion-icon>
+      </div>
+      <div style="position: absolute;top: 50%;right: 5px;font-size: 40px;z-index: 2;" (click)="this.Slides.slideNext()">
+        <ion-icon name="chevron-forward-sharp" style="color: #d1d1d1;"></ion-icon>
+      </div>
+    </div>
+  </div>
+  <div [ngSwitch]="type">
+    <div *ngSwitchCase="'Watch'">
+      <h1 class="mainText">Yeee!!!!! Chu Chu TV</h1>
+      <iframe
+        width="100%"
+        height="315"
+        src="https://www.youtube.com/embed/hq3yfQnllfQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <iframe
+        width="100%"
+        height="315"
+        src="https://www.youtube.com/embed/UtxaRodBVf8"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</ion-content>

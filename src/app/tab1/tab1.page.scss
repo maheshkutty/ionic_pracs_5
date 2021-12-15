@@ -1,0 +1,38 @@
+.imgStyle{
+    height: 100px;
+    width: 150px;
+    float: left;
+}
+
+
+.headconatiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+iframe{
+    margin-left: 5px;
+}
+
+.colStyle{
+    background-color: #fa0;
+    ion-card-title{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 25px;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+}

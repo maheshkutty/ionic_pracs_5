@@ -1,17 +1,78 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Chu Chu App </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Chu Chu App</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-label>
+    <div class="headconatiner">
+      <h1>Welcome Jone</h1>
+      <h3>I am your friend Doremon</h3>
+    </div>
+    <img src="/assets/Doremon.gif" height="150px" width="100%" />
+    <h4 style="font-family: 'Montserrat', sans-serif; text-align: center">
+      let do some funny activities
+    </h4>
+  </ion-label>
+  <ion-card class="colStyle">
+    <iframe
+      src="https://giphy.com/embed/l0ExpLAfeOXnX1Nba"
+      width="150"
+      height="100"
+      frameborder="0"
+      class="giphy-embed"
+      allowfullscreen
+      style="float: left"
+    ></iframe>
+    <ion-card-header>
+      <ion-card-title><a routerLink="/alphabets">Alphabets</a></ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-card class="colStyle">
+    <img src="/assets/Number.gif" class="imgStyle" />
+    <ion-card-header>
+      <ion-card-title><a routerLink="/numbers">Numbers</a></ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <!-- <ion-col><img src="/assets/Number.gif" class="imgStyle" />Numbers</ion-col> -->
+  <ion-card class="colStyle">
+    <iframe
+      src="https://giphy.com/embed/2UEMOVIDd0CPBveU3w"
+      width="150"
+      height="100"
+      frameborder="0"
+      class="giphy-embed"
+      allowfullscreen
+      style="float: left"
+    ></iframe>
+    <ion-card-header>
+      <ion-card-title><a routerLink="/shapes">Shapes</a></ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <!-- <ion-card class="colStyle">
+    <iframe
+      src="https://giphy.com/embed/YrUEi5Qxute4y98kqx"
+      width="150"
+      height="100"
+      frameborder="0"
+      class="giphy-embed"
+      allowfullscreen
+      style="float: left"
+    ></iframe>
+    <ion-card-header>
+      <ion-card-title> <a routerLink="/shapes">Colors</a></ion-card-title>
+    </ion-card-header>
+  </ion-card> -->
+  <ion-card class="colStyle">
+    <img src="/assets/quiz.png" class="imgStyle" />
+    <ion-card-header>
+      <ion-card-title><a routerLink="/tabs/tab2">Quizz</a></ion-card-title>
+    </ion-card-header>
+  </ion-card>
 </ion-content>
